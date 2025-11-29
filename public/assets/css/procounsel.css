@@ -810,7 +810,19 @@ h6 {
   }
 }
 .sec-title__title span {
-  color: var(--procounsel-base, #c7954a);
+  color: var(--procounsel-base, #b8823a);
+  font-weight: 600;
+  opacity: 1;
+}
+.sec-title__title span div {
+  color: white !important;
+  font-weight: inherit !important;
+  opacity: 1 !important;
+}
+.sec-title__title span div div {
+  color: white !important;
+  font-weight: inherit !important;
+  opacity: 1 !important;
 }
 .sec-title__title--white {
   color: var(--procounsel-white, #fff);
@@ -18208,7 +18220,7 @@ body.megamenu-popup-active .mobile-nav__content {
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
-  color: var(--procounsel-white, #fff);
+  color: var(--procounsel-primary, #19223a);
 }
 .service-one__item__count::before {
   content: counters(count, ".", decimal-leading-zero);
@@ -20897,6 +20909,18 @@ body.boxed-wrapper .main-header {
 .main-slider-one__btn .procounsel-btn > span {
   background-color: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+/* Fix for page hero titles - hide the ::after overlay and ensure text is visible */
+.main-slider-one__item .main-slider-one__title::after {
+  display: none !important;
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+.main-slider-one__item .main-slider-one__title {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
 }
 
 .feature-one__item__icon i {

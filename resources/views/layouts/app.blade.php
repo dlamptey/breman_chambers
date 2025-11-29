@@ -64,7 +64,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/logo-light.png" width="155" alt="" /></a>
+                <a href="{{ url('/') }}" aria-label="logo image" style="display: inline-block; background-color: white; padding: 15px 20px; border-radius: 8px;"><img src="{{ asset('assets/images/logo.png') }}" width="190" alt="Breman Chambers" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -73,29 +73,29 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@procounsel.com">needhelp@procounsel.com</a>
+                    <a href="mailto:hello@bremanchambers.com">hello@bremanchambers.com</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:+233244376601 0">+233 244 376 6010</a>
+                    <a href="tel:+2332443766010">+233 244 376 6010</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__social">
-                <a href="https://facebook.com">
-                    <i class="icon-facebook"></i>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-facebook"></i>
                     <span class="sr-only">Facebook</span>
                 </a>
-                <a href="https://pinterest.com">
-                    <i class="icon-pinterest"></i>
-                    <span class="sr-only">Pinterest</span>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-linkedin"></i>
+                    <span class="sr-only">LinkedIn</span>
                 </a>
-                <a href="https://twitter.com">
-                    <i class="icon-twitter"></i>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-twitter"></i>
                     <span class="sr-only">Twitter</span>
                 </a>
-                <a href="https://youtube.com">
-                    <i class="icon-youtube"></i>
-                    <span class="sr-only">Youtube</span>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-instagram"></i>
+                    <span class="sr-only">Instagram</span>
                 </a>
             </div><!-- /.mobile-nav__social -->
         </div>
@@ -109,7 +109,7 @@
             <form role="search" method="get" class="search-popup__form" action="index.html#">
                 <input type="text" id="search" placeholder="Search Here..." />
                 <button type="submit" aria-label="search submit" class="procounsel-btn">
-                    <i><i class="icon-search"></i></i><span><i class="icon-search"></i></span>
+                    <i><i class="fa fa-search"></i></i><span><i class="fa fa-search"></i></span>
                 </button>
             </form>
         </div>

@@ -3,21 +3,20 @@
         <div class="main-header__inner">
             <div class="main-header__logo">
                 <a href="{{ url('/') }}" class="d-inline-flex align-items-center gap-3 text-decoration-none">
-                    <img
-                        src="{{ asset('assets/images/logo.png') }}"
-                        alt="Breman Chambers"
-                        class="img-fluid"
-                        style="max-height: 64px; width: auto;"
-                    >
+                    <div style="background-color: white; padding: 12px 18px; border-radius: 8px; display: inline-flex; align-items: center;">
+                        <img
+                            src="{{ asset('assets/images/logo.png') }}"
+                            alt="Breman Chambers"
+                            class="img-fluid"
+                            style="max-height: 85px; width: auto;"
+                        >
+                    </div>
                  
                 </a>
             </div><!-- /.main-header__logo -->
             @php
                 $homeUrl = url('/');
                 $onHome = url()->current() === $homeUrl;
-                $anchor = static function (string $section) use ($onHome, $homeUrl): string {
-                    return $onHome ? "#{$section}" : "{$homeUrl}#{$section}";
-                };
 
                 $navigationLinks = [
                     [
@@ -26,19 +25,19 @@
                     ],
                     [
                         'label' => 'About',
-                        'href' => $anchor('about'),
+                        'href' => url('/about'),
                     ],
                     [
                         'label' => 'Expertise',
-                        'href' => $anchor('expertise'),
+                        'href' => url('/expertise'),
                     ],
                     [
                         'label' => 'Engagement',
-                        'href' => $anchor('consult'),
+                        'href' => url('/engagement'),
                     ],
                     [
                         'label' => 'Contact',
-                        'href' => 'mailto:hello@bremanchambers.com',
+                        'href' => url('/contact'),
                     ],
                 ];
             @endphp
@@ -47,16 +46,7 @@
                 <ul class="main-menu__list">
                     @foreach ($navigationLinks as $link)
                         @php
-                            $isAnchor = \Illuminate\Support\Str::startsWith($link['href'], '#');
-                            $isHomeAnchor = \Illuminate\Support\Str::startsWith($link['href'], "{$homeUrl}#");
-
-                            if ($isAnchor) {
-                                $isCurrent = false;
-                            } elseif ($isHomeAnchor) {
-                                $isCurrent = $onHome;
-                            } else {
-                                $isCurrent = url()->current() === $link['href'];
-                            }
+                            $isCurrent = url()->current() === $link['href'];
                         @endphp
                         <li @class(['current' => $isCurrent])>
                             <a href="{{ $link['href'] }}">{{ $link['label'] }}</a>
@@ -71,20 +61,20 @@
                     <span></span>
                 </div><!-- /.mobile-nav__toggler -->
                 <div class="main-header__btn">
-                    <a href="{{ $anchor('consult') }}" class="procounsel-btn">
+                    <a href="{{ url('/engagement') }}" class="procounsel-btn">
                         <i>Start Consultation</i><span>Start Consultation</span>
                     </a><!-- /.thm-btn main-header__btn -->
                 </div>
                 <div class="main-header__info">
                     <div class="main-header__info__icon">
-                        <i class="icon-phone-1"></i>
+                        <i class="fa fa-phone"></i>
                         <span class="main-header__info__icon__zoom">
-                            <i class="icon-phone-1"></i>
+                            <i class="fa fa-phone"></i>
                         </span>
                     </div>
                     <div>
                         <span class="main-header__info__text">Call anytime</span>
-                        <a href="tel:+233244376601 0">+233 244 376 6010</a>
+                        <a href="tel:+2332443766010">+233 244 376 6010</a>
                     </div>
                 </div>
             </div><!-- /.main-header__right -->

@@ -1,57 +1,56 @@
 <footer class="main-footer">
-    <div class="main-footer__bg" style="background-image: url(assets/images/backgrounds/footer-bg.png);"></div>
+    <div class="main-footer__bg" style="background-image: url({{ asset('assets/images/backgrounds/footer-bg.png') }});"></div>
     <div class="main-footer__top">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="00ms">
                     <div class="footer-widget footer-widget--about">
-                        <a href="index.html" class="footer-widget__logo">
-                            <img src="assets/images/logo-light.png" width="160" alt="Procounsel HTML Template">
+                        <a href="{{ url('/') }}" class="footer-widget__logo" style="display: inline-block; background-color: white; padding: 15px 20px; border-radius: 8px;">
+                            <img src="{{ asset('assets/images/logo.png') }}" width="200" alt="Breman Chambers">
                         </a>
                         <p class="footer-widget__text">
-                            Discover a unique approach with our dedicated attorneys, committed effective legal solutions.
+                            Integrity. Excellence. Justice. Delivering tailored legal services across corporate, property, family, criminal, contract, and civil matters.
                         </p>
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-md-6 -->
                 <div class="col-md-6 col-xl-2 wow fadeInUp" data-wow-delay="100ms">
                     <div class="footer-widget footer-widget--links">
-                        <h2 class="footer-widget__title">Links</h2><!-- /.footer-widget__title -->
+                        <h2 class="footer-widget__title">Quick Links</h2><!-- /.footer-widget__title -->
                         <ul class="list-unstyled footer-widget__links">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="team.html">Meet the Lawyer</a></li>
-                            <li><a href="project.html">Our Case study</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{ url('/') }}#about">About Us</a></li>
+                            <li><a href="{{ url('/') }}#expertise">Our Expertise</a></li>
+                            <li><a href="{{ url('/') }}#consult">Engagement</a></li>
+                            <li><a href="{{ url('/') }}#contact">Contact</a></li>
                         </ul><!-- /.list-unstyled footer-widget__links -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-md-6 -->
                 <div class="col-md-6 col-xl-2 wow fadeInUp" data-wow-delay="200ms">
                     <div class="footer-widget footer-widget--links">
-                        <h2 class="footer-widget__title">Explore</h2><!-- /.footer-widget__title -->
+                        <h2 class="footer-widget__title">Services</h2><!-- /.footer-widget__title -->
                         <ul class="list-unstyled footer-widget__links">
-                            <li><a href="packages.html">What We Offer</a></li>
-                            <li><a href="about.html">Our Story</a></li>
-                            <li><a href="blog-list-right.html">Latest News</a></li>
-                            <li><a href="contact.html">Help Center</a></li>
+                            <li><a href="{{ url('/') }}#expertise">Corporate Law</a></li>
+                            <li><a href="{{ url('/') }}#expertise">Property Law</a></li>
+                            <li><a href="{{ url('/') }}#expertise">Family Law</a></li>
+                            <li><a href="{{ url('/') }}#expertise">Criminal Law</a></li>
                         </ul><!-- /.list-unstyled footer-widget__links -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-md-6 -->
                 <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="300ms">
                     <div class="footer-widget footer-widget--mail">
                         <h2 class="footer-widget__title">
-                            Signup for our latest news<br> & articles
+                            Get in Touch<br> & Stay Connected
                         </h2><!-- /.footer-widget__title -->
-                        <form action="index.html#" data-url="MAILCHIMP_FORM_URL" class="footer-widget__newsletter mc-form">
-                            <input type="text" name="EMAIL" placeholder="Email Address">
-                            <button type="submit">
-                                <i class="icon-right-arrow-2"></i>
-                                <span class="sr-only">submit</span><!-- /.sr-only -->
-                            </button>
-                        </form><!-- /. mc-form -->
-                        <div class="footer-widget__check">
-                            <input type="checkbox" checked="" name="save-data" id="save-data">
-                            <label for="save-data"><span></span>I agree to the <a href="checkout.html">Privacy Policy.</a></label>
+                        <p class="footer-widget__text">
+                            Contact us for expert legal advice and consultation. We're here to help you navigate your legal needs with integrity and excellence.
+                        </p>
+                        <div class="footer-widget__contact">
+                            <a href="mailto:hello@bremanchambers.com" class="footer-widget__contact__link">
+                                <i class="fa fa-envelope"></i> hello@bremanchambers.com
+                            </a>
+                            <a href="tel:+2332443766010" class="footer-widget__contact__link">
+                                <i class="fa fa-phone"></i> +233 244 376 6010
+                            </a>
                         </div>
-                        <div class="mc-form__response"></div><!-- /.mc-form__response -->
                         <!-- /.footer-widget__text -->
                     </div><!-- /.footer-widget -->
                 </div><!-- /.col-md-6 -->
@@ -61,29 +60,29 @@
                     <div class="col-lg-8">
                         <div class="main-footer__info__inner">
                             <div class="main-footer__info__pin">
-                                <i class="icon-pin"></i>
+                                <i class="fa fa-map-marker-alt"></i>
                             </div>
                             <div class="main-footer__info__location">
-                                #49 Royalt Castle Experts consult building
+                                Accra, Ghana
                             </div>
                             <ul class="list-unstyled main-footer__info__list">
                                 <li class="main-footer__info__item">
                                     <div class="main-footer__info__icon">
-                                        <i class="icon-telephone-call-1"></i>
+                                        <i class="fa fa-phone"></i>
                                     </div>
                                     <div class="main-footer__info__content">
                                         <p class="main-footer__info__text">
-                                            <a href="tel:+233244376601 0">+233 244 376 6010</a>
+                                            <a href="tel:+2332443766010">+233 244 376 6010</a>
                                         </p><!-- /.contact-one__info__text -->
                                     </div>
                                 </li>
                                 <li class="main-footer__info__item">
                                     <div class="main-footer__info__icon">
-                                        <i class="icon-mail"></i>
+                                        <i class="fa fa-envelope"></i>
                                     </div>
                                     <div class="main-footer__info__content">
                                         <p class="main-footer__info__text">
-                                            <a href="mailto:info@bremanchambers.com">info@bremanchambers.com</a>
+                                            <a href="mailto:hello@bremanchambers.com">hello@bremanchambers.com</a>
                                         </p><!-- /.contact-one__info__text -->
                                     </div>
                                 </li>
@@ -92,21 +91,21 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="main-footer__info__social">
-                            <a href="https://facebook.com">
-                                <i class="icon-facebook"></i>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-facebook"></i>
                                 <span class="sr-only">Facebook</span>
                             </a>
-                            <a href="https://pinterest.com">
-                                <i class="icon-pinterest"></i>
-                                <span class="sr-only">Pinterest</span>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-linkedin"></i>
+                                <span class="sr-only">LinkedIn</span>
                             </a>
-                            <a href="https://twitter.com">
-                                <i class="icon-twitter"></i>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-twitter"></i>
                                 <span class="sr-only">Twitter</span>
                             </a>
-                            <a href="https://youtube.com">
-                                <i class="icon-youtube"></i>
-                                <span class="sr-only">Youtube</span>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                <i class="fa fa-instagram"></i>
+                                <span class="sr-only">Instagram</span>
                             </a>
                         </div>
                     </div>
